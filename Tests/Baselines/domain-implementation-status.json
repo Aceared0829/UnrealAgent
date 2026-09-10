@@ -1,0 +1,2780 @@
+{
+  "version": 1,
+  "owner": "UnrealAgent",
+  "statusModel": [
+    "pending",
+    "native",
+    "compatible",
+    "verified"
+  ],
+  "domains": [
+    {
+      "name": "project",
+      "transportTool": "project",
+      "actions": [
+        {
+          "name": "get_status",
+          "status": "compatible",
+          "implementation": "ExtractedTools.GetProjectInfo"
+        },
+        {
+          "name": "set_project",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.SetProject"
+        },
+        {
+          "name": "get_info",
+          "status": "compatible",
+          "implementation": "ExtractedTools.GetProjectInfo"
+        },
+        {
+          "name": "read_config",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ReadConfig"
+        },
+        {
+          "name": "search_config",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.SearchConfig"
+        },
+        {
+          "name": "list_config_tags",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ListConfigTags"
+        },
+        {
+          "name": "read_cpp_header",
+          "status": "compatible",
+          "implementation": "ExtractedTools.ReadFile"
+        },
+        {
+          "name": "read_module",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ReadModule"
+        },
+        {
+          "name": "list_modules",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ListModules"
+        },
+        {
+          "name": "search_cpp",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.SearchCpp"
+        },
+        {
+          "name": "read_engine_header",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ReadEngineHeader"
+        },
+        {
+          "name": "find_engine_symbol",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.FindEngineSymbol"
+        },
+        {
+          "name": "list_engine_modules",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ListEngineModules"
+        },
+        {
+          "name": "search_engine_cpp",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.SearchEngineCpp"
+        },
+        {
+          "name": "search_tools",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.SearchTools"
+        },
+        {
+          "name": "execute_python_report",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ExecutePythonReport"
+        },
+        {
+          "name": "list_files",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ListFiles"
+        },
+        {
+          "name": "set_config",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.SetConfig"
+        },
+        {
+          "name": "build",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.Build"
+        },
+        {
+          "name": "generate_project_files",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.GenerateProjectFiles"
+        },
+        {
+          "name": "create_cpp_class",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.CreateCppClass"
+        },
+        {
+          "name": "list_project_modules",
+          "status": "compatible",
+          "implementation": "ExtractedTools.ListProjectModules"
+        },
+        {
+          "name": "list_loaded_modules",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.ListLoadedModules"
+        },
+        {
+          "name": "is_module_loaded",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.IsModuleLoaded"
+        },
+        {
+          "name": "live_coding_compile",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.LiveCodingCompile"
+        },
+        {
+          "name": "live_coding_status",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.LiveCodingStatus"
+        },
+        {
+          "name": "write_cpp_file",
+          "status": "compatible",
+          "implementation": "ExtractedTools.WriteFile"
+        },
+        {
+          "name": "read_cpp_source",
+          "status": "compatible",
+          "implementation": "ExtractedTools.ReadFile"
+        },
+        {
+          "name": "write_source_file",
+          "status": "compatible",
+          "implementation": "ExtractedTools.WriteFile"
+        },
+        {
+          "name": "read_source_file",
+          "status": "compatible",
+          "implementation": "ExtractedTools.ReadFile"
+        },
+        {
+          "name": "add_module_dependency",
+          "status": "native",
+          "implementation": "UnrealProjectAdapter.AddModuleDependency"
+        }
+      ]
+    },
+    {
+      "name": "level",
+      "transportTool": "level",
+      "actions": [
+        {
+          "name": "get_outliner",
+          "status": "compatible",
+          "implementation": "Tools.ListLevelActors"
+        },
+        {
+          "name": "place_actor",
+          "status": "compatible",
+          "implementation": "Tools.SpawnActor"
+        },
+        {
+          "name": "delete_actor",
+          "status": "compatible",
+          "implementation": "Tools.DeleteActor"
+        },
+        {
+          "name": "get_actor_details",
+          "status": "compatible",
+          "implementation": "Tools.GetActorDetails"
+        },
+        {
+          "name": "move_actor",
+          "status": "compatible",
+          "implementation": "Tools.TransformActor"
+        },
+        {
+          "name": "select",
+          "status": "compatible",
+          "implementation": "Tools.SelectActor"
+        },
+        {
+          "name": "get_selected",
+          "status": "compatible",
+          "implementation": "Tools.GetSelectedActors"
+        },
+        {
+          "name": "get_current",
+          "status": "compatible",
+          "implementation": "Tools.ListLevelActors"
+        },
+        {
+          "name": "save",
+          "status": "compatible",
+          "implementation": "Tools.SaveCurrentLevel"
+        },
+        {
+          "name": "list",
+          "status": "compatible",
+          "implementation": "Tools.ListLevelActors"
+        },
+        {
+          "name": "set_actor_property",
+          "status": "compatible",
+          "implementation": "Tools.SetActorProperty"
+        },
+        {
+          "name": "attach_actor",
+          "status": "compatible",
+          "implementation": "Tools.AttachActor"
+        },
+        {
+          "name": "set_editor_visibility",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetEditorVisibility"
+        },
+        {
+          "name": "delete_actors",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.DeletionStepper"
+        },
+        {
+          "name": "delete_by_folder",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.DeletionStepper"
+        },
+        {
+          "name": "get_actors_by_class",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetActorsByClass"
+        },
+        {
+          "name": "count_actors_by_class",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.CountActorsByClass"
+        },
+        {
+          "name": "get_actor_bounds",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetActorBounds"
+        },
+        {
+          "name": "get_component_tree",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetComponentTree"
+        },
+        {
+          "name": "get_relative_transform",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetRelativeTransform"
+        },
+        {
+          "name": "resolve_actor",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.ResolveActor"
+        },
+        {
+          "name": "set_actor_folder_path",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetActorFolderPath"
+        },
+        {
+          "name": "add_actor_tag",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.AddActorTag"
+        },
+        {
+          "name": "remove_actor_tag",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.RemoveActorTag"
+        },
+        {
+          "name": "set_actor_tags",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetActorTags"
+        },
+        {
+          "name": "list_actor_tags",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.ListActorTags"
+        },
+        {
+          "name": "detach_actor",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.DetachActor"
+        },
+        {
+          "name": "set_actor_mobility",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetActorMobility"
+        },
+        {
+          "name": "aim_actor_at",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.AimActorAt"
+        },
+        {
+          "name": "nav_project_point",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.NavProjectPoint"
+        },
+        {
+          "name": "add_component",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.AddComponent"
+        },
+        {
+          "name": "remove_component",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.RemoveComponent"
+        },
+        {
+          "name": "set_component_property",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetComponentProperty"
+        },
+        {
+          "name": "get_component_details",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetComponentDetails"
+        },
+        {
+          "name": "get_actors_by_component_class",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetActorsByComponentClass"
+        },
+        {
+          "name": "get_spline_info",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetSplineInfo"
+        },
+        {
+          "name": "set_spline_points",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetSplinePoints"
+        },
+        {
+          "name": "set_actor_material",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetActorMaterial"
+        },
+        {
+          "name": "read_actor_motion",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.ReadActorMotion"
+        },
+        {
+          "name": "add_hismc_instances",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.AddHISMCInstances"
+        },
+        {
+          "name": "get_instance_transforms",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetInstanceTransforms"
+        },
+        {
+          "name": "update_instance_transform",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.UpdateInstanceTransform"
+        },
+        {
+          "name": "remove_instance",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.RemoveInstance"
+        },
+        {
+          "name": "line_trace",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.LineTrace"
+        },
+        {
+          "name": "snap_actor_to_floor",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SnapActorToFloor"
+        },
+        {
+          "name": "load",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.LoadLevel"
+        },
+        {
+          "name": "create",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.CreateLevel"
+        },
+        {
+          "name": "spawn_volume",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SpawnVolume"
+        },
+        {
+          "name": "list_volumes",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.ListVolumes"
+        },
+        {
+          "name": "set_volume_properties",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetVolumeProperties"
+        },
+        {
+          "name": "spawn_light",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SpawnLight"
+        },
+        {
+          "name": "set_light_properties",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetLightProperties"
+        },
+        {
+          "name": "set_fog_properties",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetFogProperties"
+        },
+        {
+          "name": "get_runtime_virtual_texture_summary",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetRuntimeVirtualTextureSummary"
+        },
+        {
+          "name": "set_water_body_property",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetWaterBodyProperty"
+        },
+        {
+          "name": "build_lighting",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.BuildLighting"
+        },
+        {
+          "name": "get_world_settings",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetWorldSettings"
+        },
+        {
+          "name": "set_world_settings",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetWorldSettings"
+        },
+        {
+          "name": "set_nanite_settings",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetNaniteSettings"
+        },
+        {
+          "name": "get_nanite_info",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetNaniteInfo"
+        },
+        {
+          "name": "add_post_process_blendable",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.AddPostProcessBlendable"
+        },
+        {
+          "name": "export_actor_fbx",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.ExportActorFbx"
+        },
+        {
+          "name": "spawn_skeletal_mesh_actor",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SpawnSkeletalMeshActor"
+        },
+        {
+          "name": "list_actor_descs",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.ListActorDescs"
+        },
+        {
+          "name": "load_actor_descs",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.LoadActorDescs"
+        },
+        {
+          "name": "get_current_edit_level",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.GetCurrentEditLevel"
+        },
+        {
+          "name": "set_current_edit_level",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetCurrentEditLevel"
+        },
+        {
+          "name": "list_streaming_sublevels",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.ListStreamingSublevels"
+        },
+        {
+          "name": "add_streaming_sublevel",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.AddStreamingSublevel"
+        },
+        {
+          "name": "remove_streaming_sublevel",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.RemoveStreamingSublevel"
+        },
+        {
+          "name": "set_streaming_sublevel_properties",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SetStreamingSublevelProperties"
+        },
+        {
+          "name": "spawn_grid",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.SpawnGrid"
+        },
+        {
+          "name": "batch_translate",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.BatchTranslate"
+        },
+        {
+          "name": "place_actors_batch",
+          "status": "native",
+          "implementation": "UnrealLevelAdapter.PlaceActorsBatchStepper"
+        }
+      ]
+    },
+    {
+      "name": "asset",
+      "transportTool": "asset",
+      "actions": [
+        {
+          "name": "list",
+          "status": "compatible",
+          "implementation": "Tools.FindAssets"
+        },
+        {
+          "name": "search",
+          "status": "compatible",
+          "implementation": "Tools.FindAssets"
+        },
+        {
+          "name": "read",
+          "status": "compatible",
+          "implementation": "Tools.ReadAsset"
+        },
+        {
+          "name": "read_properties",
+          "status": "compatible",
+          "implementation": "Tools.ReadAsset"
+        },
+        {
+          "name": "list_properties",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Inspect"
+        },
+        {
+          "name": "get_properties",
+          "status": "compatible",
+          "implementation": "Tools.ReadAsset"
+        },
+        {
+          "name": "duplicate",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "rename",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "bulk_rename",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "move",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "delete",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "delete_batch",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "create_data_asset",
+          "status": "compatible",
+          "implementation": "Tools.CreateAsset"
+        },
+        {
+          "name": "create_asset_by_class",
+          "status": "compatible",
+          "implementation": "Tools.CreateAsset"
+        },
+        {
+          "name": "save",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "save_all_dirty",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "set_property",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "reload_package",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "health_check",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.QueryRegistry"
+        },
+        {
+          "name": "force_reload",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "get_referencers",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.QueryRegistry"
+        },
+        {
+          "name": "get_dependencies",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.QueryRegistry"
+        },
+        {
+          "name": "get_primary_asset_ids",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.QueryRegistry"
+        },
+        {
+          "name": "diagnose_registry",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.QueryRegistry"
+        },
+        {
+          "name": "move_folder",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "create_folder",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "delete_folder",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "lock",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "unlock",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "list_locks",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "unlock_all",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Mutate"
+        },
+        {
+          "name": "read_datatable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "create_datatable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "reimport_datatable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "set_datatable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "add_datatable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "update_datatable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "remove_datatable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "get_datatable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "set_datatable_cell",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "rename_datatable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "fill_datatable_from_json",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "create_curvetable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "read_curvetable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "list_curvetable_rows",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "import_curvetable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "add_curvetable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "remove_curvetable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "rename_curvetable_row",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "get_curvetable_keys",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "set_curvetable_keys",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "add_curvetable_key",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "create_stringtable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "read_stringtable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "list_stringtable_keys",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "get_stringtable_entry",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "set_stringtable_entry",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "remove_stringtable_entry",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "import_stringtable",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Tables"
+        },
+        {
+          "name": "list_textures",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Textures"
+        },
+        {
+          "name": "get_texture_info",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Textures"
+        },
+        {
+          "name": "set_texture_settings",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Textures"
+        },
+        {
+          "name": "set_texture_settings_by_type",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Textures"
+        },
+        {
+          "name": "set_mesh_material",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "add_socket",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "remove_socket",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "list_sockets",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "set_socket_transform",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "list_skeleton_bones",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "set_sk_material_slots",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "get_mesh_bounds",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "get_mesh_info",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "read_import_sources",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "get_mesh_collision",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "set_mesh_nav",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Meshes"
+        },
+        {
+          "name": "add_input_mapping",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "remove_input_mapping",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "list_input_mappings",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "create_user_defined_enum",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "list_enum_values",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "edit_user_defined_enum",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "create_user_defined_struct",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "list_struct_fields",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "edit_user_defined_struct",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "rename_struct_field",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Definitions"
+        },
+        {
+          "name": "recenter_pivot",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "import_static_mesh",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "import_skeletal_mesh",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "import_animation",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "import_texture",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "read_cloth_data",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "set_cloth_config",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "export_texture",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "compare_textures",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "import_texture_batch",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "reimport",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "create_interchange_pipeline",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "export",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "search_fts",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "reindex_fts",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "migrate",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        },
+        {
+          "name": "diff",
+          "status": "native",
+          "implementation": "UnrealAssetAdapter.Advanced"
+        }
+      ]
+    },
+    {
+      "name": "editor",
+      "transportTool": "editor",
+      "actions": [
+        {
+          "name": "execute_command",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "execute_python",
+          "status": "deprecated",
+          "implementation": "UnrealEditorAdapter.Session.RejectBlockingPython"
+        },
+        {
+          "name": "run_python_file",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "purge_python_modules",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "close_sequence",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "open_tab",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "open_settings",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "set_property",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Objects"
+        },
+        {
+          "name": "get_property",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Objects"
+        },
+        {
+          "name": "describe_object",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Objects"
+        },
+        {
+          "name": "play_in_editor",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "get_runtime_value",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "get_runtime_values",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "get_pie_pawn",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "list_pie_instances",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "read_bone_transforms",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "set_movement_mode",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "teleport_runtime_actor",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "invoke_object_function",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Objects"
+        },
+        {
+          "name": "get_object_properties",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Objects"
+        },
+        {
+          "name": "invoke_function",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Objects"
+        },
+        {
+          "name": "invoke_static_function",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Objects"
+        },
+        {
+          "name": "list_function_libraries",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Objects"
+        },
+        {
+          "name": "set_pie_time_scale",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "configure_pie",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "get_pie_config",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "pie_set_player_view",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "stage_game_input",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Runtime"
+        },
+        {
+          "name": "hot_reload",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "undo",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "redo",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "get_perf_stats",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "run_stat",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "set_scalability",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "set_cvars",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "set_realtime",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Viewport"
+        },
+        {
+          "name": "get_viewport",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Viewport"
+        },
+        {
+          "name": "set_viewport",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Viewport"
+        },
+        {
+          "name": "focus_on_actor",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Viewport"
+        },
+        {
+          "name": "capture_screenshot",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Viewport"
+        },
+        {
+          "name": "get_log",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "search_log",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "get_message_log",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "list_crashes",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "get_crash_info",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "check_for_crashes",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "open_asset",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "reload_bridge",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "save_dirty",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "list_dirty_packages",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Session"
+        },
+        {
+          "name": "get_build_status",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Diagnostics"
+        },
+        {
+          "name": "capture_scene_png",
+          "status": "deprecated",
+          "implementation": "UnrealEditorAdapter.Viewport"
+        },
+        {
+          "name": "hit_test_viewport_pixel",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Viewport"
+        },
+        {
+          "name": "create_sequence",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Sequencer"
+        },
+        {
+          "name": "get_sequence_info",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Sequencer"
+        },
+        {
+          "name": "add_sequence_track",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Sequencer"
+        },
+        {
+          "name": "add_sequence_section",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Sequencer"
+        },
+        {
+          "name": "set_sequence_keyframes",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Sequencer"
+        },
+        {
+          "name": "set_sequence_playback_range",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Sequencer"
+        },
+        {
+          "name": "play_sequence",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Sequencer"
+        },
+        {
+          "name": "build_all",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Build"
+        },
+        {
+          "name": "build_geometry",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Build"
+        },
+        {
+          "name": "build_hlod",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Build"
+        },
+        {
+          "name": "validate_assets",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Build"
+        },
+        {
+          "name": "cook_content",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Build"
+        },
+        {
+          "name": "run_automation_tests",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Build"
+        },
+        {
+          "name": "set_dialog_policy",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Dialogs"
+        },
+        {
+          "name": "clear_dialog_policy",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Dialogs"
+        },
+        {
+          "name": "get_dialog_policy",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Dialogs"
+        },
+        {
+          "name": "list_dialogs",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Dialogs"
+        },
+        {
+          "name": "respond_to_dialog",
+          "status": "native",
+          "implementation": "UnrealEditorAdapter.Dialogs"
+        },
+        {
+          "name": "start_editor",
+          "status": "native",
+          "implementation": "WorldDataMCPHost.WindowsEditorProcessService"
+        },
+        {
+          "name": "stop_editor",
+          "status": "native",
+          "implementation": "WorldDataMCPHost.WindowsEditorProcessService"
+        },
+        {
+          "name": "restart_editor",
+          "status": "native",
+          "implementation": "WorldDataMCPHost.WindowsEditorProcessService"
+        },
+        {
+          "name": "build_project",
+          "status": "native",
+          "implementation": "WorldDataMCPHost.WindowsEditorProcessService"
+        }
+      ]
+    },
+    {
+      "name": "reflection",
+      "transportTool": "reflection",
+      "actions": [
+        {
+          "name": "reflect_class",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.ReflectClass"
+        },
+        {
+          "name": "reflect_struct",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.ReflectStruct"
+        },
+        {
+          "name": "reflect_enum",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.ReflectEnum"
+        },
+        {
+          "name": "list_classes",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.ListClasses"
+        },
+        {
+          "name": "list_tags",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.ListTags"
+        },
+        {
+          "name": "create_tag",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.CreateTag"
+        },
+        {
+          "name": "create_enum",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.CreateEnum"
+        },
+        {
+          "name": "set_enum_entries",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.SetEnumEntries"
+        },
+        {
+          "name": "is_class_loaded",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.IsClassLoaded"
+        },
+        {
+          "name": "is_module_loaded",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.IsModuleLoaded"
+        },
+        {
+          "name": "list_loaded_modules",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.ListLoadedModules"
+        },
+        {
+          "name": "inspect_save_game",
+          "status": "native",
+          "implementation": "UnrealReflectionAdapter.InspectSaveGame"
+        }
+      ]
+    },
+    {
+      "name": "foliage",
+      "transportTool": "foliage",
+      "actions": [
+        {
+          "name": "list_types",
+          "status": "native",
+          "implementation": "UnrealFoliageAdapter.ListTypes"
+        },
+        {
+          "name": "get_settings",
+          "status": "native",
+          "implementation": "UnrealFoliageAdapter.GetSettings"
+        },
+        {
+          "name": "sample",
+          "status": "native",
+          "implementation": "UnrealFoliageAdapter.Sample"
+        },
+        {
+          "name": "create_type",
+          "status": "native",
+          "implementation": "UnrealFoliageAdapter.CreateType"
+        },
+        {
+          "name": "set_settings",
+          "status": "native",
+          "implementation": "UnrealFoliageAdapter.SetSettings"
+        }
+      ]
+    },
+    {
+      "name": "networking",
+      "transportTool": "networking",
+      "actions": [
+        {
+          "name": "set_replicates",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.SetReplicates"
+        },
+        {
+          "name": "set_property_replicated",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.SetPropertyReplicated"
+        },
+        {
+          "name": "configure_net_frequency",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.ConfigureNetFrequency"
+        },
+        {
+          "name": "set_dormancy",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.SetDormancy"
+        },
+        {
+          "name": "set_net_load_on_client",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.SetNetLoadOnClient"
+        },
+        {
+          "name": "set_always_relevant",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.SetAlwaysRelevant"
+        },
+        {
+          "name": "set_only_relevant_to_owner",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.SetOnlyRelevantToOwner"
+        },
+        {
+          "name": "configure_cull_distance",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.ConfigureCullDistance"
+        },
+        {
+          "name": "set_priority",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.SetPriority"
+        },
+        {
+          "name": "set_replicate_movement",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.SetReplicateMovement"
+        },
+        {
+          "name": "get_info",
+          "status": "native",
+          "implementation": "UnrealNetworkingAdapter.GetInfo"
+        }
+      ]
+    },
+    {
+      "name": "plugins",
+      "transportTool": "plugins",
+      "actions": [
+        {
+          "name": "list",
+          "status": "native",
+          "implementation": "UnrealPluginsAdapter.List"
+        },
+        {
+          "name": "describe",
+          "status": "native",
+          "implementation": "UnrealPluginsAdapter.Describe"
+        }
+      ]
+    },
+    {
+      "name": "feedback",
+      "transportTool": "feedback",
+      "actions": [
+        {
+          "name": "submit",
+          "status": "native",
+          "implementation": "UnrealFeedbackAdapter.Submit"
+        },
+        {
+          "name": "route",
+          "status": "native",
+          "implementation": "UnrealFeedbackAdapter.Route"
+        }
+      ]
+    },
+    {
+      "name": "epic",
+      "transportTool": "epic",
+      "actions": [
+        {
+          "name": "status",
+          "status": "native",
+          "implementation": "UnrealEpicAdapter.Status"
+        },
+        {
+          "name": "list_toolsets",
+          "status": "native",
+          "implementation": "UnrealEpicAdapter.ListToolsets"
+        },
+        {
+          "name": "describe_toolset",
+          "status": "native",
+          "implementation": "UnrealEpicAdapter.DescribeToolset"
+        },
+        {
+          "name": "call_tool",
+          "status": "native",
+          "implementation": "UnrealEpicAdapter.CallTool"
+        }
+      ]
+    },
+    {
+      "name": "chooser",
+      "transportTool": "chooser",
+      "actions": [
+        {
+          "name": "create",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.Create"
+        },
+        {
+          "name": "describe",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.Describe"
+        },
+        {
+          "name": "add_column",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.AddColumn"
+        },
+        {
+          "name": "list_rows",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.ListRows"
+        },
+        {
+          "name": "add_row",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.AddRow"
+        },
+        {
+          "name": "set_row",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.SetRow"
+        },
+        {
+          "name": "delete_row",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.DeleteRow"
+        },
+        {
+          "name": "list_object_references",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.ListObjectReferences"
+        },
+        {
+          "name": "remap_object_references",
+          "status": "native",
+          "implementation": "UnrealChooserAdapter.RemapObjectReferences"
+        }
+      ]
+    },
+    {
+      "name": "fab",
+      "transportTool": "fab",
+      "actions": [
+        {
+          "name": "status",
+          "status": "native",
+          "implementation": "UnrealFabAdapter.Status"
+        },
+        {
+          "name": "login",
+          "status": "native",
+          "implementation": "UnrealFabAdapter.Login"
+        },
+        {
+          "name": "logout",
+          "status": "native",
+          "implementation": "UnrealFabAdapter.Logout"
+        },
+        {
+          "name": "sync_library",
+          "status": "native",
+          "implementation": "UnrealFabAdapter.SyncLibrary"
+        },
+        {
+          "name": "list_cached",
+          "status": "native",
+          "implementation": "UnrealFabAdapter.ListCached"
+        },
+        {
+          "name": "cache_info",
+          "status": "native",
+          "implementation": "UnrealFabAdapter.CacheInfo"
+        },
+        {
+          "name": "clear_cache",
+          "status": "native",
+          "implementation": "UnrealFabAdapter.ClearCache"
+        },
+        {
+          "name": "import_file",
+          "status": "native",
+          "implementation": "UnrealFabAdapter.ImportFile"
+        }
+      ]
+    },
+    {
+      "name": "landscape",
+      "transportTool": "landscape",
+      "actions": [
+        {
+          "name": "get_info",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.GetInfo"
+        },
+        {
+          "name": "list_layers",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.ListLayers"
+        },
+        {
+          "name": "sample",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.Sample"
+        },
+        {
+          "name": "sample_batch",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.SampleBatch"
+        },
+        {
+          "name": "sample_grid",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.SampleGrid"
+        },
+        {
+          "name": "sample_polyline",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.SamplePolyline"
+        },
+        {
+          "name": "sculpt",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.SculptBatchStepper"
+        },
+        {
+          "name": "sculpt_batch",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.SculptBatchStepper"
+        },
+        {
+          "name": "set_height_rect",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.HeightWriteStepper"
+        },
+        {
+          "name": "import_heightmap",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.HeightWriteStepper"
+        },
+        {
+          "name": "reset_heights",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.HeightWriteStepper"
+        },
+        {
+          "name": "paint_layer",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.PaintLayerStepper"
+        },
+        {
+          "name": "list_splines",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.ListSplines"
+        },
+        {
+          "name": "get_component",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.GetComponent"
+        },
+        {
+          "name": "set_material",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.SetMaterial"
+        },
+        {
+          "name": "add_layer_info",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.AddLayerInfo"
+        },
+        {
+          "name": "create_layer_info",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.CreateLayerInfo"
+        },
+        {
+          "name": "create",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.Create"
+        },
+        {
+          "name": "get_material_usage_summary",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.GetMaterialUsageSummary"
+        },
+        {
+          "name": "list_proxies",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.ListProxies"
+        },
+        {
+          "name": "find_proxy_at",
+          "status": "native",
+          "implementation": "UnrealLandscapeAdapter.FindProxyAt"
+        }
+      ]
+    },
+    {
+      "name": "pcg",
+      "transportTool": "pcg",
+      "actions": [
+        {
+          "name": "list_graphs",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.ListGraphs"
+        },
+        {
+          "name": "read_graph",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.ReadGraph"
+        },
+        {
+          "name": "read_node_settings",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.ReadNodeSettings"
+        },
+        {
+          "name": "get_components",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.GetComponents"
+        },
+        {
+          "name": "get_component_details",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.GetComponentDetails"
+        },
+        {
+          "name": "create_graph",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.CreateGraph"
+        },
+        {
+          "name": "add_node",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.AddNode"
+        },
+        {
+          "name": "connect_nodes",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.ConnectNodes"
+        },
+        {
+          "name": "disconnect_nodes",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.DisconnectNodes"
+        },
+        {
+          "name": "set_node_settings",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.SetNodeSettings"
+        },
+        {
+          "name": "set_static_mesh_spawner_meshes",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.SetStaticMeshSpawnerMeshes"
+        },
+        {
+          "name": "remove_node",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.RemoveNode"
+        },
+        {
+          "name": "execute",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.Execute"
+        },
+        {
+          "name": "force_regenerate",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.ForceRegenerate"
+        },
+        {
+          "name": "cleanup",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.Cleanup"
+        },
+        {
+          "name": "toggle_graph",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.ToggleGraph"
+        },
+        {
+          "name": "add_volume",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.AddVolume"
+        },
+        {
+          "name": "import_graph",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.ImportGraph"
+        },
+        {
+          "name": "export_graph",
+          "status": "native",
+          "implementation": "UnrealPCGAdapter.ExportGraph"
+        }
+      ]
+    },
+    {
+      "name": "gas",
+      "transportTool": "gas",
+      "actions": [
+        {
+          "name": "add_asc",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.AddASC"
+        },
+        {
+          "name": "create_attribute_set",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.CreateAttributeSet"
+        },
+        {
+          "name": "add_attribute",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.AddAttribute"
+        },
+        {
+          "name": "create_ability",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.CreateAbility"
+        },
+        {
+          "name": "set_ability_tags",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.SetAbilityTags"
+        },
+        {
+          "name": "create_effect",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.CreateEffect"
+        },
+        {
+          "name": "set_effect_modifier",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.SetEffectModifier"
+        },
+        {
+          "name": "create_cue",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.CreateCue"
+        },
+        {
+          "name": "get_info",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.GetInfo"
+        },
+        {
+          "name": "set_asc_defaults",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.SetASCDefaults"
+        },
+        {
+          "name": "apply_effect",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.ApplyEffect"
+        },
+        {
+          "name": "set_attribute",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.SetAttribute"
+        },
+        {
+          "name": "get_attribute",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.GetAttribute"
+        },
+        {
+          "name": "init_asc",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.InitASC"
+        },
+        {
+          "name": "get_asc_state",
+          "status": "native",
+          "implementation": "UnrealGASAdapter.GetASCState"
+        }
+      ]
+    },
+    {
+      "name": "material",
+      "transportTool": "material",
+      "actions": [
+        {
+          "name": "read",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.Read"
+        },
+        {
+          "name": "list_parameters",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ListParameters"
+        },
+        {
+          "name": "set_parameter",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetParameter"
+        },
+        {
+          "name": "read_instance",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ReadInstance"
+        },
+        {
+          "name": "set_instance_parent",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetInstanceParent"
+        },
+        {
+          "name": "batch_set_instances",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.BatchSetInstances"
+        },
+        {
+          "name": "clear_instance_parameters",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ClearInstanceParameters"
+        },
+        {
+          "name": "list_static_switches",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ListStaticSwitches"
+        },
+        {
+          "name": "set_static_switch",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetStaticSwitch"
+        },
+        {
+          "name": "set_expression_value",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetExpressionValue"
+        },
+        {
+          "name": "set_custom_expression",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetCustomExpression"
+        },
+        {
+          "name": "disconnect_property",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.DisconnectProperty"
+        },
+        {
+          "name": "create_instance",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.CreateInstance"
+        },
+        {
+          "name": "create",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.Create"
+        },
+        {
+          "name": "create_function",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.CreateFunction"
+        },
+        {
+          "name": "add_function_expression",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.AddFunctionExpression"
+        },
+        {
+          "name": "connect_function_expressions",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ConnectFunctionExpressions"
+        },
+        {
+          "name": "list_function_expressions",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ListFunctionExpressions"
+        },
+        {
+          "name": "create_simple",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.CreateSimple"
+        },
+        {
+          "name": "set_usage",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetUsage"
+        },
+        {
+          "name": "set_shading_model",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetShadingModel"
+        },
+        {
+          "name": "set_blend_mode",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetBlendMode"
+        },
+        {
+          "name": "set_domain",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetDomain"
+        },
+        {
+          "name": "set_base_color",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.SetBaseColor"
+        },
+        {
+          "name": "connect_texture",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ConnectTexture"
+        },
+        {
+          "name": "add_expression",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.AddExpression"
+        },
+        {
+          "name": "connect_expressions",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ConnectExpressions"
+        },
+        {
+          "name": "connect_to_property",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ConnectToProperty"
+        },
+        {
+          "name": "list_expressions",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ListExpressions"
+        },
+        {
+          "name": "delete_expression",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.DeleteExpression"
+        },
+        {
+          "name": "list_expression_types",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ListExpressionTypes"
+        },
+        {
+          "name": "recompile",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.Recompile"
+        },
+        {
+          "name": "duplicate",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.Duplicate"
+        },
+        {
+          "name": "validate",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.Validate"
+        },
+        {
+          "name": "get_shader_stats",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.GetShaderStats"
+        },
+        {
+          "name": "export_graph",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ExportGraph"
+        },
+        {
+          "name": "import_graph",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.ImportGraph"
+        },
+        {
+          "name": "build_graph",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.BuildGraph"
+        },
+        {
+          "name": "render_preview",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.RenderPreview"
+        },
+        {
+          "name": "begin_transaction",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.BeginTransaction"
+        },
+        {
+          "name": "end_transaction",
+          "status": "native",
+          "implementation": "UnrealMaterialAdapter.EndTransaction"
+        }
+      ]
+    },
+    {
+      "name": "widget",
+      "transportTool": "widget",
+      "actions": [
+        {
+          "name": "read_tree",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.ReadTree"
+        },
+        {
+          "name": "get_details",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.GetDetails"
+        },
+        {
+          "name": "get_properties",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.GetProperties"
+        },
+        {
+          "name": "list_bindings",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.ListBindings"
+        },
+        {
+          "name": "clear_binding",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.ClearBinding"
+        },
+        {
+          "name": "set_property",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.SetProperty"
+        },
+        {
+          "name": "set_style",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.SetStyle"
+        },
+        {
+          "name": "reorder_child",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.ReorderChild"
+        },
+        {
+          "name": "bulk_set_properties",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.BulkSetProperties"
+        },
+        {
+          "name": "list",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.List"
+        },
+        {
+          "name": "read_animations",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.ReadAnimations"
+        },
+        {
+          "name": "create",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.Create"
+        },
+        {
+          "name": "create_utility_widget",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.CreateUtilityWidget"
+        },
+        {
+          "name": "run_utility_widget",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.RunUtilityWidget"
+        },
+        {
+          "name": "create_utility_blueprint",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.CreateUtilityBlueprint"
+        },
+        {
+          "name": "run_utility_blueprint",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.RunUtilityBlueprint"
+        },
+        {
+          "name": "add_widget",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.AddWidget"
+        },
+        {
+          "name": "remove_widget",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.RemoveWidget"
+        },
+        {
+          "name": "move_widget",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.MoveWidget"
+        },
+        {
+          "name": "set_root",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.SetRoot"
+        },
+        {
+          "name": "wrap_root",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.WrapRoot"
+        },
+        {
+          "name": "list_classes",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.ListClasses"
+        },
+        {
+          "name": "list_runtime",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.ListRuntime"
+        },
+        {
+          "name": "get_runtime",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.GetRuntime"
+        },
+        {
+          "name": "get_runtime_delegates",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.GetRuntimeDelegates"
+        },
+        {
+          "name": "add_to_viewport",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.AddToViewport"
+        },
+        {
+          "name": "invoke_runtime_function",
+          "status": "native",
+          "implementation": "UnrealWidgetAdapter.InvokeRuntimeFunction"
+        }
+      ]
+    },
+    {
+      "name": "niagara",
+      "transportTool": "niagara",
+      "actions": [
+        { "name": "list", "status": "native", "implementation": "UnrealNiagaraAdapter.List" },
+        { "name": "get_info", "status": "native", "implementation": "UnrealNiagaraAdapter.GetInfo" },
+        { "name": "validate", "status": "native", "implementation": "UnrealNiagaraAdapter.Validate" },
+        { "name": "spawn", "status": "native", "implementation": "UnrealNiagaraAdapter.Spawn" },
+        { "name": "spawn_actor", "status": "native", "implementation": "UnrealNiagaraAdapter.SpawnActor" },
+        { "name": "reactivate", "status": "native", "implementation": "UnrealNiagaraAdapter.Reactivate" },
+        { "name": "set_parameter", "status": "native", "implementation": "UnrealNiagaraAdapter.SetParameter" },
+        { "name": "create", "status": "native", "implementation": "UnrealNiagaraAdapter.Create" },
+        { "name": "create_emitter", "status": "native", "implementation": "UnrealNiagaraAdapter.CreateEmitter" },
+        { "name": "add_emitter", "status": "native", "implementation": "UnrealNiagaraAdapter.AddEmitter" },
+        { "name": "remove_emitter", "status": "native", "implementation": "UnrealNiagaraAdapter.RemoveEmitter" },
+        { "name": "list_emitters", "status": "native", "implementation": "UnrealNiagaraAdapter.ListEmitters" },
+        { "name": "set_emitter_property", "status": "native", "implementation": "UnrealNiagaraAdapter.SetEmitterProperty" },
+        { "name": "list_modules", "status": "native", "implementation": "UnrealNiagaraAdapter.ListModules" },
+        { "name": "get_emitter_info", "status": "native", "implementation": "UnrealNiagaraAdapter.GetEmitterInfo" },
+        { "name": "list_renderers", "status": "native", "implementation": "UnrealNiagaraAdapter.ListRenderers" },
+        { "name": "add_renderer", "status": "native", "implementation": "UnrealNiagaraAdapter.AddRenderer" },
+        { "name": "remove_renderer", "status": "native", "implementation": "UnrealNiagaraAdapter.RemoveRenderer" },
+        { "name": "set_renderer_property", "status": "native", "implementation": "UnrealNiagaraAdapter.SetRendererProperty" },
+        { "name": "inspect_data_interfaces", "status": "native", "implementation": "UnrealNiagaraAdapter.InspectDataInterfaces" },
+        { "name": "create_system_from_spec", "status": "native", "implementation": "UnrealNiagaraAdapter.CreateSystemFromSpec" },
+        { "name": "get_compiled_hlsl", "status": "native", "implementation": "UnrealNiagaraAdapter.GetCompiledHlsl" },
+        { "name": "list_system_parameters", "status": "native", "implementation": "UnrealNiagaraAdapter.ListSystemParameters" },
+        { "name": "list_module_inputs", "status": "native", "implementation": "UnrealNiagaraAdapter.ListModuleInputs" },
+        { "name": "set_module_input", "status": "native", "implementation": "UnrealNiagaraAdapter.SetModuleInput" },
+        { "name": "add_module", "status": "native", "implementation": "UnrealNiagaraAdapter.AddModule" },
+        { "name": "list_static_switches", "status": "native", "implementation": "UnrealNiagaraAdapter.ListStaticSwitches" },
+        { "name": "set_static_switch", "status": "native", "implementation": "UnrealNiagaraAdapter.SetStaticSwitch" },
+        { "name": "create_module_from_hlsl", "status": "native", "implementation": "UnrealNiagaraAdapter.CreateModuleFromHlsl" },
+        { "name": "create_scratch_module", "status": "native", "implementation": "UnrealNiagaraAdapter.CreateScratchModule" },
+        { "name": "batch", "status": "native", "implementation": "UnrealNiagaraAdapter.Batch" }
+      ]
+    },
+    {
+      "name": "statetree",
+      "transportTool": "statetree",
+      "actions": [
+        { "name": "read", "status": "native", "implementation": "UnrealStateTreeAdapter.Read" },
+        { "name": "list_states", "status": "native", "implementation": "UnrealStateTreeAdapter.ListStates" },
+        { "name": "add_state", "status": "native", "implementation": "UnrealStateTreeAdapter.AddState" },
+        { "name": "remove_state", "status": "native", "implementation": "UnrealStateTreeAdapter.RemoveState" },
+        { "name": "set_state_property", "status": "native", "implementation": "UnrealStateTreeAdapter.SetStateProperty" },
+        { "name": "clear_state_nodes", "status": "native", "implementation": "UnrealStateTreeAdapter.ClearStateNodes" },
+        { "name": "add_task", "status": "native", "implementation": "UnrealStateTreeAdapter.AddTask" },
+        { "name": "add_enter_condition", "status": "native", "implementation": "UnrealStateTreeAdapter.AddEnterCondition" },
+        { "name": "remove_enter_condition", "status": "native", "implementation": "UnrealStateTreeAdapter.RemoveEnterCondition" },
+        { "name": "remove_task", "status": "native", "implementation": "UnrealStateTreeAdapter.RemoveTask" },
+        { "name": "set_task_instance_property", "status": "native", "implementation": "UnrealStateTreeAdapter.SetTaskInstanceProperty" },
+        { "name": "set_task_property", "status": "native", "implementation": "UnrealStateTreeAdapter.SetTaskProperty" },
+        { "name": "add_transition", "status": "native", "implementation": "UnrealStateTreeAdapter.AddTransition" },
+        { "name": "add_transition_condition", "status": "native", "implementation": "UnrealStateTreeAdapter.AddTransitionCondition" },
+        { "name": "remove_transition", "status": "native", "implementation": "UnrealStateTreeAdapter.RemoveTransition" },
+        { "name": "add_binding", "status": "native", "implementation": "UnrealStateTreeAdapter.AddBinding" },
+        { "name": "remove_binding", "status": "native", "implementation": "UnrealStateTreeAdapter.RemoveBinding" },
+        { "name": "list_bindings", "status": "native", "implementation": "UnrealStateTreeAdapter.ListBindings" },
+        { "name": "list_bindable_sources", "status": "native", "implementation": "UnrealStateTreeAdapter.ListBindableSources" },
+        { "name": "add_evaluator", "status": "native", "implementation": "UnrealStateTreeAdapter.AddEvaluator" },
+        { "name": "remove_evaluator", "status": "native", "implementation": "UnrealStateTreeAdapter.RemoveEvaluator" },
+        { "name": "set_evaluator_instance_property", "status": "native", "implementation": "UnrealStateTreeAdapter.SetEvaluatorInstanceProperty" },
+        { "name": "set_evaluator_property", "status": "native", "implementation": "UnrealStateTreeAdapter.SetEvaluatorProperty" },
+        { "name": "add_global_task", "status": "native", "implementation": "UnrealStateTreeAdapter.AddGlobalTask" },
+        { "name": "remove_global_task", "status": "native", "implementation": "UnrealStateTreeAdapter.RemoveGlobalTask" },
+        { "name": "set_global_task_instance_property", "status": "native", "implementation": "UnrealStateTreeAdapter.SetGlobalTaskInstanceProperty" },
+        { "name": "set_global_task_property", "status": "native", "implementation": "UnrealStateTreeAdapter.SetGlobalTaskProperty" },
+        { "name": "list_colors", "status": "native", "implementation": "UnrealStateTreeAdapter.ListColors" },
+        { "name": "add_color", "status": "native", "implementation": "UnrealStateTreeAdapter.AddColor" },
+        { "name": "list_state_parameters", "status": "native", "implementation": "UnrealStateTreeAdapter.ListStateParameters" },
+        { "name": "add_state_parameter", "status": "native", "implementation": "UnrealStateTreeAdapter.AddStateParameter" },
+        { "name": "remove_state_parameter", "status": "native", "implementation": "UnrealStateTreeAdapter.RemoveStateParameter" },
+        { "name": "set_state_parameter", "status": "native", "implementation": "UnrealStateTreeAdapter.SetStateParameter" },
+        { "name": "set_root_parameters", "status": "native", "implementation": "UnrealStateTreeAdapter.SetRootParameters" },
+        { "name": "compile", "status": "native", "implementation": "UnrealStateTreeAdapter.Compile" },
+        { "name": "validate", "status": "native", "implementation": "UnrealStateTreeAdapter.Validate" }
+      ]
+    },
+    {
+      "name": "blueprint",
+      "transportTool": "blueprint",
+      "actions": [
+        { "name": "read", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "list_variables", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "list_functions", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "read_graph", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "read_graph_summary", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "get_execution_flow", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "get_dependencies", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "diff", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "create", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "add_variable", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_variable_properties", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "create_function", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "delete_function", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "rename_function", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "add_node", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "delete_node", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_node_property", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "connect_pins", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "add_component", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "remove_component", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_component_property", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_component_override_materials", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "add_timeline_track", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_capsule_size", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "get_component_property", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_class_default", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "delete_variable", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "add_function_parameter", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_variable_default", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "compile", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "list_node_types", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "search_node_types", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "create_interface", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "add_interface", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "override_function", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "list_overridable_functions", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "list_graphs", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "resolve_graph", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "add_event_dispatcher", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "duplicate", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "add_local_variable", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "list_local_variables", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "validate", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "read_component_properties", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "read_node_property", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "reparent_component", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "reparent", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "flush_ich", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_actor_tick_settings", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "export_nodes_t3d", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "import_nodes_t3d", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_cdo_property", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "get_cdo_properties", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "run_construction_script", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "compile_all", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "author", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "cleanup_graph", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "connect_pins_batch", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "set_node_position", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" },
+        { "name": "auto_layout", "status": "native", "implementation": "UnrealBlueprintAdapter.ExecuteAction" }
+      ]
+    },
+    {
+      "name": "gameplay",
+      "transportTool": "gameplay",
+      "actions": [
+        { "name": "set_collision_profile", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_simulate_physics", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "add_impulse", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_collision_enabled", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_collision", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_physics_properties", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "rebuild_navigation", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "find_nav_path", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "list_nav_invokers", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "get_navmesh_info", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "project_to_nav", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "spawn_nav_modifier", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_input_action", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_input_mapping", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "list_input_assets", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "read_imc", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "get_applied_imcs", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "list_input_mappings", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "add_imc_mapping", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_mapping_modifiers", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "remove_imc_mapping", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_imc_mapping_key", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_imc_mapping_action", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "list_behavior_trees", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "get_behavior_tree_info", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "read_behavior_tree_graph", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_blackboard", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "add_blackboard_key", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "remove_blackboard_key", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_blackboard_parent", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "read_blackboard", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "list_bt_node_classes", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_behavior_tree_blackboard", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_behavior_tree", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_eqs_query", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "list_eqs_queries", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "add_perception", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "configure_sense", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "get_state_tree_runtime", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_state_tree", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "list_state_trees", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "add_state_tree_component", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_smart_object_def", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "add_smart_object_component", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "add_smart_object_slot", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_smart_object_slot", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "remove_smart_object_slot", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "list_smart_object_slots", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "add_smart_object_slot_behavior", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_game_mode", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_game_state", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_player_controller", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_player_state", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "create_hud", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "set_world_game_mode", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "get_framework_info", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" },
+        { "name": "get_navmesh_details", "status": "native", "implementation": "UnrealGameplayAdapter.ExecuteAction" }
+      ]
+    },
+    {
+      "name": "demo",
+      "transportTool": "demo",
+      "actions": [
+        { "name": "step", "status": "native", "implementation": "UnrealDemoAdapter.ExecuteAction" },
+        { "name": "get_steps", "status": "native", "implementation": "UnrealDemoAdapter.ExecuteAction" },
+        { "name": "cleanup", "status": "native", "implementation": "UnrealDemoAdapter.ExecuteAction" },
+        { "name": "go_home", "status": "native", "implementation": "UnrealDemoAdapter.ExecuteAction" }
+      ]
+    },
+    {
+      "name": "animation",
+      "transportTool": "animation",
+      "actions": [
+        { "name": "read_anim_blueprint", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_montage", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_sequence", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "scan_animation_tracks", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_blendspace", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_blend_sample", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_blend_sample", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "list", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_montage", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_anim_blueprint", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_blendspace", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_blendspace_1d", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "populate_blendspace", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_notify", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "remove_notify", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "get_skeleton_info", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "list_sockets", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "list_skeletal_meshes", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "get_physics_asset", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_sequence", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_bone_keyframes", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "bake_keyframes_batch", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "get_bone_transforms", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "inspect_anim_nodes", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "compare_curves_to_morph_targets", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_montage_sequence", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_montage_properties", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_state_machine", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_state", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_transition", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_state_animation", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_transition_blend", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_transition_condition", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_state_machine", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_anim_graph", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_curve", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_anim_curve_keys", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "apply_animation_modifier", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_montage_slot", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_montage_section", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_ik_rig", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_ik_rig", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "list_control_rig_variables", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_control_rig_graph", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_control_rig_hierarchy", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_root_motion", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_virtual_bone", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "remove_virtual_bone", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_composite", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "list_modifiers", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_ik_retargeter", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_ik_retargeter", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_ik_rig_mesh", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_ik_retargeter_rig", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "auto_align_retarget_pose", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "reset_retarget_pose", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "batch_retarget_animations", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_anim_blueprint_skeleton", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_bone_track", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_pose_search_database", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_pose_search_schema", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_pose_search_sequence", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_pose_search_clips", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "build_pose_search_index", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_pose_search_database", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_pose_search_database_settings", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_pose_search_schema", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_pose_search_schema_pose_channel", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_pose_search_schema_trajectory_channel", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_pose_search_schema", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_mirror_data_table", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "read_mirror_data_table", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "create_pose_search_normalization_set", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_motion_matching_node", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_pose_history_node", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_motion_matching_chooser", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "add_sequence_evaluator", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "bind_anim_node_function", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "set_sequence_properties", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "bake_root_motion_from_bone", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "get_bone_transform", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "list_bones", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "rebind_leader_pose", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" },
+        { "name": "preview_animation", "status": "native", "implementation": "UnrealAnimationAdapter.ExecuteAction" }
+      ]
+    },
+    {
+      "name": "audio",
+      "transportTool": "audio",
+      "actions": [
+        { "name": "list", "status": "native", "implementation": "UnrealAudioAdapter.List" },
+        { "name": "extract_pcm", "status": "native", "implementation": "UnrealAudioAdapter.ExtractPcm" },
+        { "name": "import_audio", "status": "native", "implementation": "UnrealAudioAdapter.ImportAudio" },
+        { "name": "play_at_location", "status": "native", "implementation": "UnrealAudioAdapter.PlayAtLocation" },
+        { "name": "spawn_ambient", "status": "native", "implementation": "UnrealAudioAdapter.SpawnAmbient" },
+        { "name": "metasound_author", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundAuthor" },
+        { "name": "create_metasound", "status": "native", "implementation": "UnrealAudioAdapter.CreateMetaSound" },
+        { "name": "metasound_list_node_classes", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundListNodeClasses" },
+        { "name": "metasound_get_graph", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundGetGraph" },
+        { "name": "metasound_add_node", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundAddNode" },
+        { "name": "metasound_add_input", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundAddInput" },
+        { "name": "metasound_add_output", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundAddOutput" },
+        { "name": "metasound_connect", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundConnect" },
+        { "name": "metasound_connect_input", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundConnectInput" },
+        { "name": "metasound_connect_output", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundConnectOutput" },
+        { "name": "metasound_connect_audio_out", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundConnectAudioOut" },
+        { "name": "metasound_set_default", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundSetDefault" },
+        { "name": "metasound_build", "status": "native", "implementation": "UnrealAudioAdapter.MetaSoundBuild" },
+        { "name": "cue_author", "status": "native", "implementation": "UnrealAudioAdapter.CueAuthor" },
+        { "name": "create_cue", "status": "native", "implementation": "UnrealAudioAdapter.CreateCue" },
+        { "name": "cue_add_node", "status": "native", "implementation": "UnrealAudioAdapter.CueAddNode" },
+        { "name": "cue_connect", "status": "native", "implementation": "UnrealAudioAdapter.CueConnect" },
+        { "name": "cue_get_graph", "status": "native", "implementation": "UnrealAudioAdapter.CueGetGraph" },
+        { "name": "create_submix", "status": "native", "implementation": "UnrealAudioAdapter.CreateSubmix" },
+        { "name": "set_submix_parent", "status": "native", "implementation": "UnrealAudioAdapter.SetSubmixParent" },
+        { "name": "add_submix_effect", "status": "native", "implementation": "UnrealAudioAdapter.AddSubmixEffect" },
+        { "name": "create_sound_class", "status": "native", "implementation": "UnrealAudioAdapter.CreateSoundClass" },
+        { "name": "create_sound_mix", "status": "native", "implementation": "UnrealAudioAdapter.CreateSoundMix" },
+        { "name": "create_concurrency", "status": "native", "implementation": "UnrealAudioAdapter.CreateConcurrency" },
+        { "name": "create_attenuation", "status": "native", "implementation": "UnrealAudioAdapter.CreateAttenuation" },
+        { "name": "set_sound_submix", "status": "native", "implementation": "UnrealAudioAdapter.SetSoundSubmix" },
+        { "name": "add_sound_submix_send", "status": "native", "implementation": "UnrealAudioAdapter.AddSoundSubmixSend" },
+        { "name": "set_sound_class", "status": "native", "implementation": "UnrealAudioAdapter.SetSoundClass" },
+        { "name": "set_sound_attenuation", "status": "native", "implementation": "UnrealAudioAdapter.SetSoundAttenuation" },
+        { "name": "set_sound_concurrency", "status": "native", "implementation": "UnrealAudioAdapter.SetSoundConcurrency" },
+        { "name": "set_property", "status": "native", "implementation": "UnrealAudioAdapter.SetProperty" }
+      ]
+    },
+    {
+      "name": "whitebox",
+      "transportTool": "whitebox",
+      "actions": [
+        {
+          "name": "build_city_wall",
+          "status": "native",
+          "implementation": "UnrealWhiteboxAdapter.CityWallTaskStepper"
+        },
+        {
+          "name": "patch_city_wall",
+          "status": "native",
+          "implementation": "UnrealWhiteboxAdapter.CityWallPatchTaskStepper"
+        },
+        {
+          "name": "clear_folder",
+          "status": "native",
+          "implementation": "UnrealWhiteboxAdapter.ClearFolderTaskStepper"
+        },
+        {
+          "name": "align_to_landscape",
+          "status": "native",
+          "implementation": "UnrealWhiteboxAdapter.AlignToLandscapeTaskStepper"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "domains": [
+    {
+      "name": "level",
+      "transportTool": "level",
+      "actions": [
+        "delete_by_folder"
+      ]
+    },
+    {
+      "name": "landscape",
+      "transportTool": "landscape",
+      "actions": [
+        "sample_batch",
+        "sample_grid",
+        "sample_polyline",
+        "sculpt_batch",
+        "set_height_rect",
+        "import_heightmap",
+        "reset_heights"
+      ]
+    },
+    {
+      "name": "whitebox",
+      "transportTool": "whitebox",
+      "actions": [
+        "build_city_wall",
+        "patch_city_wall",
+        "clear_folder",
+        "align_to_landscape"
+      ]
+    }
+  ]
+}

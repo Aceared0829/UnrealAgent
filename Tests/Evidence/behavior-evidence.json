@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "owner": "UnrealAgent",
+  "statusSource": "Tests/Baselines/domain-implementation-status.json",
+  "actionManifest": "Config/ActionContracts.json",
+  "requiredCategories": [
+    "infrastructure",
+    "fixture",
+    "cleanup",
+    "schema",
+    "security",
+    "behavior",
+    "side_effect",
+    "transaction",
+    "cancellation",
+    "performance"
+  ],
+  "globalEvidence": {
+    "infrastructure": ["WorldData.UnrealAgent.Environment.ProjectIdentityAndPort"],
+    "fixture": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+    "cleanup": ["WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"],
+    "schema": ["WorldData.UnrealAgent.Core.Schema.Contract"],
+    "security": ["WorldData.UnrealAgent.Core.Policy.DecisionAndAudit"],
+    "behavior": ["WorldData.UnrealAgent.Protocol.RepresentativeDomainKernel"],
+    "side_effect": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+    "transaction": ["WorldData.UnrealAgent.Evidence.HighRisk.ActorDeleteUndo"],
+    "cancellation": ["WorldData.UnrealAgent.Evidence.HighRisk.CancellationDeferred"],
+    "performance": ["WorldData.UnrealAgent.Core.ToolRuntimeRegistry.ProviderEndurance"]
+  },
+  "tierA": {
+    "requiredCount": 6,
+    "tools": [
+      {
+        "name": "call_tool",
+        "evidence": {
+          "schema": ["WorldData.UnrealAgent.Core.Schema.Contract"],
+          "security": ["WorldData.UnrealAgent.Evidence.HighRisk.CallToolPolicyAndAudit"],
+          "behavior": ["WorldData.UnrealAgent.Evidence.HighRisk.CallToolPolicyAndAudit"],
+          "side_effect": ["WorldData.UnrealAgent.Evidence.HighRisk.CallToolPolicyAndAudit"],
+          "cleanup": ["WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+        }
+      },
+      {
+        "name": "delete_actor",
+        "evidence": {
+          "schema": ["WorldData.UnrealAgent.Core.Schema.Contract"],
+          "security": ["WorldData.UnrealAgent.Evidence.HighRisk.ActorDeleteUndo"],
+          "behavior": ["WorldData.UnrealAgent.Evidence.HighRisk.ActorDeleteUndo"],
+          "side_effect": ["WorldData.UnrealAgent.Evidence.HighRisk.ActorDeleteUndo"],
+          "transaction": ["WorldData.UnrealAgent.Evidence.HighRisk.ActorDeleteUndo"],
+          "cleanup": ["WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+        }
+      },
+      {
+        "name": "delete_file",
+        "evidence": {
+          "schema": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "security": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "behavior": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "side_effect": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "cleanup": ["WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+        }
+      },
+      {
+        "name": "execute_python",
+        "evidence": {
+          "schema": ["WorldData.UnrealAgent.Core.Schema.Contract"],
+          "security": ["WorldData.UnrealAgent.Evidence.HighRisk.PythonConfirmationAndAudit"],
+          "behavior": ["WorldData.UnrealAgent.Evidence.HighRisk.PythonConfirmationAndAudit"],
+          "side_effect": ["WorldData.UnrealAgent.Evidence.HighRisk.PythonConfirmationAndAudit"],
+          "cleanup": ["WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+        }
+      },
+      {
+        "name": "rename_file",
+        "evidence": {
+          "schema": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "security": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "behavior": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "side_effect": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "transaction": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "cleanup": ["WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+        }
+      },
+      {
+        "name": "write_file",
+        "evidence": {
+          "schema": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "security": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "behavior": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "side_effect": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "transaction": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle"],
+          "cleanup": ["WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+        }
+      }
+    ]
+  },
+  "tierB": {
+    "requiredCount": 20,
+    "domains": {
+      "project": {
+        "actions": ["get_status", "get_info", "read_config", "search_tools", "list_files"],
+        "evidence": ["WorldData.UnrealAgent.Project.MigratedActionsIntegration"]
+      },
+      "level": {
+        "actions": ["set_actor_folder_path", "add_actor_tag", "list_actor_tags", "set_actor_mobility", "delete_actors"],
+        "evidence": ["WorldData.UnrealAgent.Level.MigratedActionsIntegration"]
+      },
+      "asset": {
+        "actions": ["duplicate", "rename", "delete", "save", "list_properties"],
+        "evidence": ["WorldData.UnrealAgent.Asset.LifecycleIntegration"]
+      },
+      "editor": {
+        "actions": ["set_property", "get_property", "configure_pie", "get_pie_config", "list_dirty_packages"],
+        "evidence": ["WorldData.UnrealAgent.Editor.MigratedActionsIntegration"]
+      }
+    },
+    "sharedEvidence": [
+      "WorldData.UnrealAgent.Core.ActionManifest.ContractMatrix",
+      "WorldData.UnrealAgent.Core.ActionManifest.FailureMatrix",
+      "WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"
+    ]
+  },
+  "tierC": {
+    "requiredActionCount": 770,
+    "evidence": [
+      "WorldData.UnrealAgent.Core.ActionManifest.ContractMatrix",
+      "WorldData.UnrealAgent.Core.ActionManifest.FailureMatrix"
+    ]
+  },
+  "tierD": {
+    "policy": "Actions not promoted by generated evidence remain native or compatible; this file never edits source status.",
+    "allowedSourceStatuses": ["pending", "native", "compatible"]
+  }
+}

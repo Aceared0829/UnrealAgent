@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "thresholdVersion": "0.3.0",
+  "supportedProtocolVersions": [
+    "2025-06-18",
+    "2025-03-26",
+    "2024-11-05"
+  ],
+  "core": {
+    "registryFindIterations": 10000,
+    "registryFindMaxMilliseconds": 2000,
+    "providerReloadIterations": 1000,
+    "sessionKernelIterations": 1000,
+    "sessionKernelMaxMilliseconds": 5000,
+    "cancellationRaceIterations": 256
+  },
+  "profiles": {
+    "smoke": {
+      "sessionLifecycleIterations": 25,
+      "sessionLifecycleMaxSeconds": 10,
+      "sseReconnectIterations": 3,
+      "taskSseSoakSeconds": 1
+    },
+    "release": {
+      "sessionLifecycleIterations": 1000,
+      "sessionLifecycleMaxSeconds": 90,
+      "sseReconnectIterations": 25,
+      "taskSseSoakSeconds": 30
+    },
+    "nightly": {
+      "sessionLifecycleIterations": 1000,
+      "sessionLifecycleMaxSeconds": 90,
+      "sseReconnectIterations": 100,
+      "taskSseSoakSeconds": 3600
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "product": "UnrealAgent",
+  "version": "0.3.0",
+  "descriptorVersion": 3,
+  "releaseChannel": "beta",
+  "providerApiVersion": 1,
+  "actionContractVersion": "1.0",
+  "publicApiManifest": "Tests/Release/public-api-0.3.json",
+  "errorCodeCatalog": "Tests/Release/error-codes-0.3.json",
+  "protocolMatrix": "Tests/Protocol/protocol-matrix.json",
+  "durabilityThresholds": "Tests/Performance/protocol-durability-thresholds.json",
+  "versionSources": [
+    "Programs/WorldDataMCPHost/Source/Application/HostApplication.cpp",
+    "Programs/WorldDataMCPHost/Source/Adapters/Editor/WinHttpEditorGateway.cpp",
+    "Source/UnrealAgentMCPEditor/Private/Infrastructure/Account/WorldDataCodexAccountUsageService.cpp",
+    "Source/UnrealAgentMCPEditor/Private/Infrastructure/ACP/UnrealAgentCodexACPClientProcess.cpp",
+    "Source/UnrealAgentMCPEditor/Private/Infrastructure/Http/UnrealAgentMCPServerHttp.cpp"
+  ],
+  "requiredReleaseDocs": [
+    "README.md",
+    "LICENSE.md",
+    "THIRD_PARTY_NOTICES.md",
+    "Docs/ProviderSDK.md",
+    "Docs/Migration-0.2-to-0.3.md",
+    "Docs/ErrorCodes.md",
+    "Docs/ExecutionLedger.md",
+    "Docs/GameThreadExecution.md",
+    "Docs/LimitationsAndRollback.md",
+    "Docs/FinalAcceptance.md"
+  ]
+}

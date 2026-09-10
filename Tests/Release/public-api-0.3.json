@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "pluginVersion": "0.3.0",
+  "providerApiVersion": 1,
+  "compatibilityPolicy": {
+    "stable": "No removal or incompatible signature change within the 0.3.x line.",
+    "preview": "Tracked for review; incompatible changes require release notes and a versioned manifest update. The 0.3 Native Kernel preview headers were removed when NativeUnrealAgent was retired."
+  },
+  "headers": [
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Execution/UnrealAgentMCPTaskManager.h",
+      "stability": "preview",
+      "symbols": ["EMcpTaskExecutionPhase", "FMcpTaskTransition", "FMcpTaskProgress", "FMcpTaskSnapshot", "FMcpCancellationToken", "FMcpCompensationHandler", "FMcpCompensationRegistrar", "FMcpCompensationMetricsReporter", "FMcpTaskExecutionContext", "GetTraceId", "IsCompensationEnabled", "RegisterCompensation", "FMcpTaskWorkResult", "FMcpTaskPrepareResult", "IMcpTaskStepper", "HasWorkerPreparation", "PrepareOnWorker", "FMcpTaskRequest", "FMcpTaskSnapshotSink", "FMcpTaskManager", "TaskStateToString", "TaskExecutionPhaseToString", "CancelResultToString"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Execution/UnrealAgentMCPExecutionLedger.h",
+      "stability": "preview",
+      "symbols": ["IMcpExecutionLedger", "AppendAuditRecord", "AppendTaskSnapshot", "IsHealthy", "GetLocation"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Execution/UnrealAgentMCPToolExecutionService.h",
+      "stability": "preview",
+      "symbols": ["EMcpToolInvocationOutcome", "FMcpToolInvocationResult", "FMcpToolExecutionOptions", "FMcpToolExecutionService", "ExecuteTyped", "InterpretResult"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Policy/UnrealAgentMCPPolicy.h",
+      "stability": "preview",
+      "symbols": ["FMcpPolicyRequestContext", "FMcpServerPolicy", "FMcpPolicyDecision", "FMcpProjectPathSandbox", "FMcpAssetPathSandbox", "FMcpPolicyEngine", "FMcpAuditRecord", "FMcpAuditLog", "PolicyOutcomeToString"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Protocol/UnrealAgentMCPProtocol.h",
+      "stability": "preview",
+      "symbols": ["GetJsonRpcVersion", "GetSupportedProtocolVersions", "GetLatestProtocolVersion", "NegotiateProtocolVersion", "CalculateStableRevision", "MakeJsonRpcRequestKey", "PaginateJsonValues", "MakeJsonRpcErrorResponse", "MakeJsonRpcNotification", "MakeCallToolResult"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Protocol/UnrealAgentMCPSessionRegistry.h",
+      "stability": "preview",
+      "symbols": ["FMcpSessionRegistry"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Reflection/UnrealAgentMCPPropertyTypeAdapter.h",
+      "stability": "preview",
+      "symbols": ["IPropertyTypeAdapter", "FPropertyTypeAdapterRegistry"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Reflection/UnrealAgentMCPReflection.h",
+      "stability": "preview",
+      "symbols": ["FToolDescriptor", "FDiscoveryResult", "BuildInputSchema", "BuildOutputSchema", "DiscoverClass", "DiscoverLoadedClasses", "Invoke"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Results/UnrealAgentMCPAsyncResultStore.h",
+      "stability": "preview",
+      "symbols": ["EAsyncResultState", "FAsyncResultSnapshot", "FMcpAsyncResultCompleted", "FAsyncResultStore", "AsyncResultStateToString"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Schema/UnrealAgentMCPJsonSchema.h",
+      "stability": "preview",
+      "symbols": ["FValidationError", "FValidationResult", "ValidateValue", "ValidateObject", "MakeValidationErrorJson", "MakeOutputValidationErrorJson"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Tooling/UnrealAgentMCPToolDescriptor.h",
+      "stability": "stable",
+      "symbols": ["McpToolProviderApiVersion", "EMcpToolRisk", "EMcpToolThreadPolicy", "EMcpToolExecutionMode", "EMcpToolTransactionPolicy", "FMcpResolvedToolContract", "FMcpToolDescriptor", "IMcpToolProvider", "RiskToString", "ThreadPolicyToString", "ExecutionModeToString", "TransactionPolicyToString", "FromJsonDefinition"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPCore/Public/Core/Tooling/UnrealAgentMCPToolRegistry.h",
+      "stability": "preview",
+      "symbols": ["FMcpToolRegistration", "FMcpToolCatalogValidationResult", "FMcpToolRegistrySnapshot", "FMcpToolRegistryChanged", "FMcpToolRuntimeRegistry", "TryDispatch", "GetRegisteredToolNames", "MergeToolDefinitionCatalogs", "ValidateToolCatalog"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPEditor/Public/Application/UnrealAgentMCPApplicationService.h",
+      "stability": "preview",
+      "symbols": ["IUnrealAgentMCPApplicationService", "CreateUnrealAgentMCPApplicationService"]
+    },
+    {
+      "path": "Source/UnrealAgentMCPEditor/Public/Application/UnrealAgentMCPToolExtensions.h",
+      "stability": "stable",
+	  "symbols": ["ToolExtensionsCompatibilityHeaderVersion"]
+    },
+    {
+      "path": "Source/UnrealAgentProviderSDK/Public/Provider/UnrealAgentMCPToolExtensions.h",
+      "stability": "stable",
+	  "symbols": ["FMcpToolCatalogState", "IMcpToolProviderHost", "RegisterToolProvider", "UnregisterToolProvider", "GetToolCatalogState", "BindToolProviderHost", "UnbindToolProviderHost"]
+    }
+  ]
+}

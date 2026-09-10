@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "contractVersion": "0.3.0",
+  "jsonRpcVersion": "2.0",
+  "latestProtocolVersion": "2025-06-18",
+  "supportedProtocolVersions": [
+    {
+      "version": "2025-06-18",
+      "mode": "native",
+      "streamableHttp": true,
+      "sse": true,
+      "pagination": true,
+      "cancellationNotification": true,
+      "deleteSession": true
+    },
+    {
+      "version": "2025-03-26",
+      "mode": "native",
+      "streamableHttp": true,
+      "sse": true,
+      "pagination": true,
+      "cancellationNotification": true,
+      "deleteSession": true
+    },
+    {
+      "version": "2024-11-05",
+      "mode": "compatibility",
+      "streamableHttp": true,
+      "sse": true,
+      "pagination": true,
+      "cancellationNotification": true,
+      "deleteSession": true
+    }
+  ],
+  "sharedRequestMethods": [
+    "initialize",
+    "ping",
+    "tools/list",
+    "tools/call",
+    "resources/list",
+    "resources/read"
+  ],
+  "httpLifecycleMethods": [
+    "notifications/initialized",
+    "notifications/cancelled",
+    "GET /mcp",
+    "DELETE /mcp"
+  ],
+  "transportKernel": {
+    "editor": "FUnrealAgentMCPServer::DispatchJsonRpcRequest",
+    "http": "authenticated Session envelope -> Editor protocol kernel",
+    "stdio": "UnrealAgentMCPHost local pre-router -> WinHttpEditorGateway -> Editor protocol kernel",
+    "localOnlyTools": "UnrealAgentMCPHost application pre-router"
+  },
+  "limits": {
+    "maximumConcurrentSessions": 16,
+    "maximumRequestBodyBytes": 1048576,
+    "defaultPageSize": 100,
+    "maximumPageSize": 250
+  }
+}

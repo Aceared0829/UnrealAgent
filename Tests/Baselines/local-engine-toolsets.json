@@ -1,0 +1,144 @@
+{
+  "engineVersion": "5.8.0",
+  "changelist": 55116800,
+  "compatibleChangelist": 0,
+  "toolsetPluginCount": 27,
+  "toolsetSourceFingerprint": "f9309fc002382fa41f798bfeb1da2021a18b1e41412a5bcfe1eeb33e3b4f98a1",
+  "plugins": [
+    {
+      "name": "AIModuleToolset",
+      "descriptor": "AIModuleToolset.uplugin",
+      "sourceFileCount": 9
+    },
+    {
+      "name": "AllToolsets",
+      "descriptor": "AllToolsets.uplugin",
+      "sourceFileCount": 1
+    },
+    {
+      "name": "AnimationAssistantToolset",
+      "descriptor": "AnimationAssistantToolset.uplugin",
+      "sourceFileCount": 24
+    },
+    {
+      "name": "AutomationTestToolset",
+      "descriptor": "AutomationTestToolset.uplugin",
+      "sourceFileCount": 9
+    },
+    {
+      "name": "ChaosClothAssetToolset",
+      "descriptor": "ChaosClothAssetToolset.uplugin",
+      "sourceFileCount": 5
+    },
+    {
+      "name": "ConfigSettingsToolset",
+      "descriptor": "ConfigSettingsToolset.uplugin",
+      "sourceFileCount": 6
+    },
+    {
+      "name": "ConversationToolset",
+      "descriptor": "ConversationToolset.uplugin",
+      "sourceFileCount": 9
+    },
+    {
+      "name": "DataflowAgent",
+      "descriptor": "DataflowAgent.uplugin",
+      "sourceFileCount": 7
+    },
+    {
+      "name": "DataRegistryToolset",
+      "descriptor": "DataRegistryToolset.uplugin",
+      "sourceFileCount": 5
+    },
+    {
+      "name": "EditorToolset",
+      "descriptor": "EditorToolset.uplugin",
+      "sourceFileCount": 58
+    },
+    {
+      "name": "GameFeaturesToolset",
+      "descriptor": "GameFeaturesToolset.uplugin",
+      "sourceFileCount": 5
+    },
+    {
+      "name": "GameplayTagsToolset",
+      "descriptor": "GameplayTagsToolset.uplugin",
+      "sourceFileCount": 6
+    },
+    {
+      "name": "GASToolsets",
+      "descriptor": "GASToolsets.uplugin",
+      "sourceFileCount": 13
+    },
+    {
+      "name": "LiveCodingToolset",
+      "descriptor": "LiveCodingToolset.uplugin",
+      "sourceFileCount": 9
+    },
+    {
+      "name": "MCPClientToolset",
+      "descriptor": "MCPClientToolset.uplugin",
+      "sourceFileCount": 9
+    },
+    {
+      "name": "MetaHumanGenerator",
+      "descriptor": "MetaHumanGenerator.uplugin",
+      "sourceFileCount": 9
+    },
+    {
+      "name": "MVVMToolset",
+      "descriptor": "MVVMToolset.uplugin",
+      "sourceFileCount": 7
+    },
+    {
+      "name": "NiagaraToolsets",
+      "descriptor": "NiagaraToolsets.uplugin",
+      "sourceFileCount": 30
+    },
+    {
+      "name": "PCGToolset",
+      "descriptor": "PCGToolset.uplugin",
+      "sourceFileCount": 24
+    },
+    {
+      "name": "PhysicsToolsets",
+      "descriptor": "PhysicsToolsets.uplugin",
+      "sourceFileCount": 7
+    },
+    {
+      "name": "PluginToolset",
+      "descriptor": "PluginToolset.uplugin",
+      "sourceFileCount": 5
+    },
+    {
+      "name": "SemanticSearchToolset",
+      "descriptor": "SemanticSearchToolset.uplugin",
+      "sourceFileCount": 7
+    },
+    {
+      "name": "SequencerAnimMixerToolset",
+      "descriptor": "SequencerAnimMixerToolset.uplugin",
+      "sourceFileCount": 7
+    },
+    {
+      "name": "SlateInspectorToolset",
+      "descriptor": "SlateInspectorToolset.uplugin",
+      "sourceFileCount": 17
+    },
+    {
+      "name": "StateTreeToolset",
+      "descriptor": "StateTreeToolset.uplugin",
+      "sourceFileCount": 9
+    },
+    {
+      "name": "UMGToolSet",
+      "descriptor": "UMGToolSet.uplugin",
+      "sourceFileCount": 9
+    },
+    {
+      "name": "WorldConditionsToolset",
+      "descriptor": "WorldConditionsToolset.uplugin",
+      "sourceFileCount": 7
+    }
+  ]
+}

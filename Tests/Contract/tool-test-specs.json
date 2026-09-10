@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "catalogHash": "sha256:5d87705d285d05773225cb0b604226d9533c89b24c81d0b44136c80db66625ac",
+  "defaults": {
+    "preconditions": ["UnrealAgent is enabled", "An initialized MCP session is available"],
+    "inputFixtures": ["minimal valid arguments", "invalid or incomplete arguments"],
+    "expectedOutput": "A JSON-RPC tool result whose content and error flag match the declared schema and handler contract.",
+    "expectedSideEffects": "Only the side effects declared by the selected evidence profile are permitted.",
+    "cleanup": "Mutation evidence must restore generated actors, assets, files, tasks, PIE state, and selections.",
+    "environment": ["UE 5.8 Editor", "Win64 Development", "NullRHI automation where supported"]
+  },
+  "profiles": {
+    "ping": {
+      "coverage": ["schema", "contract", "behavior"],
+      "evidence": ["WorldData.UnrealAgent.Protocol.RepresentativeDomainKernel"]
+    },
+    "catalog": {
+      "coverage": ["schema", "contract", "behavior"],
+      "evidence": ["WorldData.UnrealAgent.Core.ToolRuntimeRegistry.Lifecycle", "WorldData.UnrealAgent.Protocol.ToolCatalogMatchesHandlers"]
+    },
+    "execution": {
+      "coverage": ["schema", "contract", "behavior", "audit"],
+      "evidence": ["WorldData.UnrealAgent.Core.Execution.UnifiedService", "WorldData.UnrealAgent.Core.Policy.DecisionAndAudit"]
+    },
+    "execution-high-risk": {
+      "coverage": ["schema", "contract", "behavior", "security", "sideEffect", "cancellation", "audit", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Core.Schema.Contract", "WorldData.UnrealAgent.Evidence.HighRisk.CallToolPolicyAndAudit", "WorldData.UnrealAgent.Evidence.HighRisk.CancellationDeferred", "WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+    },
+    "task": {
+      "coverage": ["schema", "contract", "behavior", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Core.Execution.TaskLifecycle", "WorldData.UnrealAgent.Core.Execution.CancellationAndTimeout", "WorldData.UnrealAgent.Core.Results.AsyncLifecycle"]
+    },
+    "file-security": {
+      "coverage": ["schema", "contract", "behavior", "security"],
+      "evidence": ["WorldData.UnrealAgent.ExtractedTools.RestrictedPathRules", "WorldData.UnrealAgent.Core.Policy.PathSandbox"]
+    },
+    "file-mutation-high-risk": {
+      "coverage": ["schema", "contract", "behavior", "security", "sideEffect", "transaction", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Evidence.HighRisk.FileMutationLifecycle", "WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+    },
+    "project-read": {
+      "coverage": ["schema", "contract", "behavior"],
+      "evidence": ["WorldData.UnrealAgent.Protocol.RepresentativeDomainKernel", "WorldData.UnrealAgent.Core.ToolRuntimeRegistry.UnifiedProvider"]
+    },
+    "asset": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Asset.ActionContract", "WorldData.UnrealAgent.Asset.LifecycleIntegration"]
+    },
+    "animation": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Animation.MigratedActionsIntegration"]
+    },
+    "audio": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Audio.MigratedActionsIntegration"]
+    },
+    "blueprint": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Blueprint.MigratedActionsIntegration"]
+    },
+    "chooser": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Chooser.MigratedActionsIntegration"]
+    },
+    "demo": {
+      "coverage": ["schema", "contract", "behavior", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Demo.MigratedActionsIntegration"]
+    },
+    "editor": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Editor.ActionContract", "WorldData.UnrealAgent.Editor.MigratedActionsIntegration"]
+    },
+    "epic": {
+      "coverage": ["schema", "contract", "behavior", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Epic.MigratedActionsIntegration"]
+    },
+    "fab": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Fab.MigratedActionsIntegration"]
+    },
+    "feedback": {
+      "coverage": ["schema", "contract", "behavior"],
+      "evidence": ["WorldData.UnrealAgent.Feedback.MigratedActionsIntegration"]
+    },
+    "foliage": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Foliage.MigratedActionsIntegration"]
+    },
+    "gameplay": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Gameplay.MigratedActionsIntegration"]
+    },
+    "gas": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.GAS.MigratedActionsIntegration"]
+    },
+    "landscape": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Landscape.MigratedActionsIntegration"]
+    },
+    "level": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Level.MigratedActionsIntegration", "WorldData.UnrealAgent.Level.SpatialActionsIntegration"]
+    },
+    "level-delete-high-risk": {
+      "coverage": ["schema", "contract", "behavior", "security", "sideEffect", "transaction", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Core.Schema.Contract", "WorldData.UnrealAgent.Evidence.HighRisk.ActorDeleteUndo", "WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+    },
+    "material": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Material.MigratedActionsIntegration"]
+    },
+    "networking": {
+      "coverage": ["schema", "contract", "behavior", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Networking.MigratedActionsIntegration"]
+    },
+    "niagara": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Niagara.MigratedActionsIntegration"]
+    },
+    "pcg": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.PCG.MigratedActionsIntegration"]
+    },
+    "plugins": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Plugins.MigratedActionsIntegration"]
+    },
+    "project": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup", "security"],
+      "evidence": ["WorldData.UnrealAgent.Project.MigratedActionsIntegration", "WorldData.UnrealAgent.Core.Policy.DecisionAndAudit"]
+    },
+    "deprecated-read": {
+      "coverage": ["schema", "contract", "behavior"],
+      "evidence": ["WorldData.UnrealAgent.Evidence.HighRisk.PythonConfirmationAndAudit"]
+    },
+    "python-high-risk": {
+      "coverage": ["schema", "contract", "behavior", "security", "sideEffect", "audit", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Core.Schema.Contract", "WorldData.UnrealAgent.Evidence.HighRisk.PythonConfirmationAndAudit", "WorldData.UnrealAgent.Evidence.ZCleanup.OrphanScan"]
+    },
+    "reflection": {
+      "coverage": ["schema", "contract", "behavior"],
+      "evidence": ["WorldData.UnrealAgent.Reflection.MigratedActionsIntegration", "WorldData.UnrealAgent.Core.Reflection.Contract"]
+    },
+    "statetree": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.StateTree.MigratedActionsIntegration"]
+    },
+    "widget": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Widget.MigratedActionsIntegration"]
+    },
+    "whitebox": {
+      "coverage": ["schema", "contract", "behavior", "sideEffect", "cleanup"],
+      "evidence": ["WorldData.UnrealAgent.Whitebox.ManagedCityWallIntegration"]
+    }
+  },
+  "tools": {
+    "UnrealAgentMCP.System.ping": {"profile": "ping", "risk": "low"},
+    "animation": {"profile": "animation", "risk": "medium"},
+    "asset": {"profile": "asset", "risk": "medium"},
+    "attach_actor": {"profile": "level", "risk": "medium"},
+    "audio": {"profile": "audio", "risk": "medium"},
+    "blueprint": {"profile": "blueprint", "risk": "medium"},
+    "call_tool": {"profile": "execution-high-risk", "risk": "high"},
+    "cancel_task": {"profile": "task", "risk": "medium"},
+    "chooser": {"profile": "chooser", "risk": "medium"},
+    "create_asset": {"profile": "asset", "risk": "medium"},
+    "create_blueprint_asset": {"profile": "blueprint", "risk": "medium"},
+    "create_pcg_graph_from_recipe": {"profile": "pcg", "risk": "medium"},
+    "delete_actor": {"profile": "level-delete-high-risk", "risk": "high"},
+    "delete_file": {"profile": "file-mutation-high-risk", "risk": "high"},
+    "demo": {"profile": "demo", "risk": "low"},
+    "describe_toolset": {"profile": "catalog", "risk": "low"},
+    "editor": {"profile": "editor", "risk": "medium"},
+    "epic": {"profile": "epic", "risk": "medium"},
+    "execute_python": {"profile": "deprecated-read", "risk": "low"},
+    "execute_python_blocking": {"profile": "python-high-risk", "risk": "high"},
+    "fab": {"profile": "fab", "risk": "medium"},
+    "feedback": {"profile": "feedback", "risk": "low"},
+    "find_assets": {"profile": "asset", "risk": "low"},
+    "find_static_meshes": {"profile": "asset", "risk": "low"},
+    "foliage": {"profile": "foliage", "risk": "medium"},
+    "gameplay": {"profile": "gameplay", "risk": "medium"},
+    "gas": {"profile": "gas", "risk": "medium"},
+    "get_actor_details": {"profile": "level", "risk": "low"},
+    "get_build_configuration": {"profile": "project-read", "risk": "low"},
+    "get_codex_policy_snapshot": {"profile": "execution", "risk": "low"},
+    "get_content_summary": {"profile": "asset", "risk": "low"},
+    "get_current_project_info": {"profile": "project-read", "risk": "low"},
+    "get_level_actors": {"profile": "level", "risk": "low"},
+    "get_project_info": {"profile": "project-read", "risk": "low"},
+    "get_selected_actors": {"profile": "editor", "risk": "low"},
+    "get_task": {"profile": "task", "risk": "low"},
+    "get_toolset_call_result": {"profile": "task", "risk": "low"},
+    "get_toolset_status": {"profile": "catalog", "risk": "low"},
+    "landscape": {"profile": "landscape", "risk": "medium"},
+    "level": {"profile": "level", "risk": "medium"},
+    "list_level_actors": {"profile": "level", "risk": "low"},
+    "list_project_modules": {"profile": "project-read", "risk": "low"},
+    "list_resources": {"profile": "catalog", "risk": "low"},
+    "list_tasks": {"profile": "task", "risk": "low"},
+    "list_tool_audit": {"profile": "execution", "risk": "low"},
+    "list_toolsets": {"profile": "catalog", "risk": "low"},
+    "material": {"profile": "material", "risk": "medium"},
+    "modify_material_instance": {"profile": "material", "risk": "medium"},
+    "networking": {"profile": "networking", "risk": "medium"},
+    "niagara": {"profile": "niagara", "risk": "medium"},
+    "pcg": {"profile": "pcg", "risk": "medium"},
+    "pcg_recipe_library_status": {"profile": "pcg", "risk": "low"},
+    "play_in_editor": {"profile": "editor", "risk": "medium"},
+    "plugins": {"profile": "plugins", "risk": "medium"},
+    "project": {"profile": "project", "risk": "medium"},
+    "read_asset": {"profile": "asset", "risk": "low"},
+    "read_file": {"profile": "file-security", "risk": "low"},
+    "read_log": {"profile": "file-security", "risk": "low"},
+    "read_pcg_recipe": {"profile": "pcg", "risk": "low"},
+    "read_pcg_scene_binding": {"profile": "pcg", "risk": "low"},
+    "read_resource": {"profile": "catalog", "risk": "low"},
+    "reflection": {"profile": "reflection", "risk": "low"},
+    "rename_actor": {"profile": "level", "risk": "medium"},
+    "rename_file": {"profile": "file-mutation-high-risk", "risk": "high"},
+    "save_current_level": {"profile": "level", "risk": "medium"},
+    "search_assets": {"profile": "asset", "risk": "low"},
+    "search_pcg_recipes": {"profile": "pcg", "risk": "low"},
+    "search_tools": {"profile": "catalog", "risk": "low"},
+    "select_actor": {"profile": "editor", "risk": "medium"},
+    "set_actor_property": {"profile": "level", "risk": "medium"},
+    "spawn_actor": {"profile": "level", "risk": "medium"},
+    "statetree": {"profile": "statetree", "risk": "medium"},
+    "stop_pie": {"profile": "editor", "risk": "medium"},
+    "transform_actor": {"profile": "level", "risk": "medium"},
+    "widget": {"profile": "widget", "risk": "medium"},
+    "whitebox": {"profile": "whitebox", "risk": "medium"},
+    "write_file": {"profile": "file-mutation-high-risk", "risk": "high"}
+  }
+}

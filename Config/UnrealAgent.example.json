@@ -1,0 +1,6 @@
+{
+  "url": "http://127.0.0.1:<generated-port>/mcp",
+  "protocolVersion": "2025-06-18",
+  "accessTokenHeader": "X-WorldData-MCP-Token",
+  "accessToken": "<generated-at-runtime>"
+}

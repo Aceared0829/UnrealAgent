@@ -1,0 +1,13 @@
+{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"UnrealAgentHostTest","version":"1.0"}}}
+{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}
+{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"get_host_status","arguments":{}}}
+{"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"get_project_info","arguments":{}}}
+{"jsonrpc":"2.0","id":5,"method":"tools/call","params":{"name":"read_project_file","arguments":{"path":"TestProject.uproject"}}}
+{"jsonrpc":"2.0","id":6,"method":"resources/list","params":{}}
+{"jsonrpc":"2.0","id":7,"method":"tools/call","params":{"name":"read_project_file","arguments":{"path":"..\\outside.txt"}}}
+{"jsonrpc":"2.0","id":8,"method":"tools/call","params":{"name":"list_project_files","arguments":{"directory":".","extension":"uproject","recursive":false,"limit":10}}}
+{"jsonrpc":"2.0","id":9,"method":"resources/read","params":{"uri":"worlddata-host://project/info"}}
+{"jsonrpc":"2.0","id":10,"method":"tools/call","params":{"name":"start_editor","arguments":{"dryRun":true}}}
+{"jsonrpc":"2.0","id":11,"method":"tools/call","params":{"name":"stop_editor","arguments":{"dryRun":true}}}
+{"jsonrpc":"2.0","id":12,"method":"tools/call","params":{"name":"restart_editor","arguments":{"dryRun":true}}}
+{"jsonrpc":"2.0","id":13,"method":"tools/call","params":{"name":"build_project","arguments":{"configuration":"Development","platform":"Win64","wait":true,"dryRun":true}}}
